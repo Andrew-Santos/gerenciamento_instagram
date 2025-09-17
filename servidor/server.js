@@ -6,14 +6,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Chave secreta do webhook (do app no Facebook)
-const APP_SECRET = '3e91248279a6dbd41655b0d3344db79c';
+const APP_SECRET = '90620e783142560ce9903361efe9ff97';
 
 // Middleware para ler JSON
 app.use(bodyParser.json());
 
 // Rota de verificação do webhook (GET)
 app.get('/webhook', (req, res) => {
-    const VERIFY_TOKEN = 'EAAOzzadgA6ABPUu3VAlRr6llO7i5OxYSJhioyjcQYmVma7FjdftLVMt9nqZCnz5iet2ZCsJwl2pzr62C8INN7K40h0tiJsTmOZBDtYK5hqYT3tbe7XcgT4YIG4yhIES291u2LaVr0NNZCF04sQr8jpyjzRnvYeX3KRNJ1S73K3WYrVZCkvIZBTZBEgPs0iPrOuA5pF9v8VSwznRVqxYCKGucmXR5MaNrpxAgdpYUt2dm8GevgZDZD'; // token que você define
+    const VERIFY_TOKEN = 'awjk'; // token que você define
     const mode = req.query['hub.mode'];
     const token = req.query['hub.verify_token'];
     const challenge = req.query['hub.challenge'];
@@ -69,3 +69,4 @@ function verifyRequestSignature(payload, signature) {
 app.listen(PORT, () => {
     console.log(`Webhook rodando em http://localhost:${PORT}`);
 });
+
