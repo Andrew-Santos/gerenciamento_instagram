@@ -1,4 +1,3 @@
-// Troque esse token pelo mesmo que você vai colocar no painel da Meta
 const VERIFY_TOKEN = "AWMSSANTOS";
 
 export default function handler(req, res) {
