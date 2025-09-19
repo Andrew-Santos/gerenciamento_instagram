@@ -1,7 +1,0 @@
-{
-  "name": "webhook-js",
-  "version": "1.0.0",
-  "main": "api/webhook.js",
-  "license": "MIT",
-  "dependencies": {}
-}
